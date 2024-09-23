@@ -50,8 +50,21 @@ document.getElementById('modal-close-btn').addEventListener('click',function(eve
 
 })
 
-// Transection history
-document.getElementById('history-list-form').addEventListener('click',function(event){
+
+// Top donation Button secton
+document.getElementById('donation-top-button').addEventListener('click',function(event){
     event.preventDefault;
+    document.getElementById('noakhali-card').classList.remove('hidden');
+    document.getElementById('history-list-form').classList.add('hidden');
+    
 
 })
+
+//Top History Section
+document.getElementById('add-history-btn').addEventListener('click',function(event){
+    event.preventDefault;
+    document.getElementById('history-list-form').classList.remove('hidden');
+    document.getElementById('noakhali-card').classList.add('hidden');
+
+})
+
