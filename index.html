@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- Header start Here -->
-     <header>
+     <header class="sticky">
     <div class= "bg-[#f9f7f3] w-full">
         <div class="navbar h-24 p-5 w-11/12 mx-auto flex justify-between mb-8 ">
             <!-- Navigation left size button start here -->
@@ -30,14 +30,16 @@
             <!-- Navigation center end -->
              
             <!-- navigation Right side start -->
-            <div class="gap-1">
+            <div class="">
                 <img src="./assets/coin.png" alt="">
-                <p class="btn btn-ghost text-xl">5500 <span>BDT</span></p>
+                <p id="accountBalance" class="btn btn-ghost text-xl">5500<span>BDT</span></p>
             </div>
          </div>
            <!-- Navigation Right side End -->
         </div>
-        <div class="flex justify-center gap-2  mb-4">
+
+        <!-- History and Donation Button -->
+        <div class="flex justify-center gap-2 mb-4 sticky">
           <div>
               <button class="btn btn-active bg-lime-400 font-extrabold text-xl ">Donation</button>
           </div>
@@ -54,24 +56,30 @@
     <!-- Main start Herer -->
     <main>
         <div class="hero bg-base-200 min-h-screen">
+            <!-- Noakhali left side image here -->
             <div class="hero-content flex-col lg:flex-row">
               <img class=" w-full h-full"
                 src="./assets/noakhali.png"
                 class="max-w-sm rounded-lg shadow-2xl" />
 
+                <!-- Noakhali Right side content here -->
               <div class="">
-
+                <!-- content Noakhli Donation Button -->
                 <div class="card-actions flex items-center justify-start">
-                    <button class="btn p-4 font-bold text-lg content-center w-18 bg-lime-300"><img src="./assets/coin.png" alt=""><span>00</span>BDT</button>
+                    <button class="btn p-4 font-bold text-lg content-center w-18 bg-lime-300"><img src="./assets/coin.png" alt=""><span id="noakhaliDonate">100</span>BDT</button>
                   </div>
+                  <!-- content Noakhli Donation Button END -->
+
                 <h1 class="text-4xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="py-6">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
                 <!-- Noakhali donate amount and button -->
                 <div class="card-actions justify-center">
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
-                    <button class="btn bg-lime-400 p-4 font-bold text-lg content-center w-full">Donate Now</button>
+                    <!--Noakhali Donation input amount -->
+                    <input id="donate-input-amount" type="text" placeholder="Write Donation Amount" autocomplete="off" class="input input-bordered w-full"/>
+                    <!-- Input Donate Button -->
+                    <button id="donate-input-button" class="btn bg-lime-400 p-4 font-bold text-lg content-center w-full">Donate Now</button>
                   </div>
               </div>
             </div>
