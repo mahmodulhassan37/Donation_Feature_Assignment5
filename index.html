@@ -55,7 +55,7 @@
 
     <!-- Main start Herer -->
     <main>
-        <div class="hero bg-base-200 min-h-screen">
+        <div class="hero relative bg-base-200 min-h-screen">
             <!-- Noakhali left side image here -->
             <div class="hero-content flex-col lg:flex-row">
               <img class=" w-full h-full"
@@ -84,6 +84,23 @@
               </div>
             </div>
           </div>
+          <!-- modal section start here -->
+          <div id="modal-form" class="hidden absolute ml-20 top-96 left-96 card mx-auto bg-base-100 w-4/12 shadow-2xl">
+            <div class="card-body items-center">
+              <h2 class="card-title text-3xl font-extrabold">Congratulation!</h2>
+              <!-- Modal amount show-->
+              <div class="flex gap-2">
+                <p id="modal-amount" class="text-2xl font-semibold"></p>
+              <span><img src="./assets/coin.png" alt="" srcset=""></span>
+              </div>
+              <p>You have donated for HumanKinds </p>
+              <h3 class="font-bold text-xl">SuccessFully</h3>
+              <div class="card-actions justify-center">
+                <button id="modal-close-btn" class="btn">Close Confirmation</button>
+              </div>
+            </div>
+          </div>
+          <!-- modal Section End Here -->
     </main>
         <!-- Main Ende Here -->
 
