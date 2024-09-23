@@ -18,6 +18,18 @@ document.getElementById("donate-input-button").addEventListener('click',function
             document.getElementById('modal-form').classList.remove("hidden");
             document.getElementById('modal-amount').innerText=donateInputAmount;
 
+            // history section addd
+            let listHistorySection= document.getElementById('history-list-form');
+            let createList = document.createElement('li');
+            createList.classList.add('bg-gray-100','text-2xl','p-3','rounded', 'shadow');
+            let currenttTime = new Date().toLocaleString();
+            createList.innerText =`
+            ${donateInputAmount} Taka is donated for flood at Noakhali,Bangladesh;
+            Date:${currenttTime}; 
+            `;
+            listHistorySection.appendChild(createList);
+
+
         }
         else{
             alert("Your Account Balance insufficient")
@@ -35,5 +47,11 @@ document.getElementById("donate-input-button").addEventListener('click',function
 document.getElementById('modal-close-btn').addEventListener('click',function(event){
     event.preventDefault;
     document.getElementById('modal-form').classList.add("hidden");
+
+})
+
+// Transection history
+document.getElementById('history-list-form').addEventListener('click',function(event){
+    event.preventDefault;
 
 })
