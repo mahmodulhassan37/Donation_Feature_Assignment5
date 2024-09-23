@@ -13,8 +13,9 @@
 </head>
 <body>
     <!-- Header start Here -->
-    <header class= "bg-[#f9f7f3] w-12/12">
-        <div class="navbar h-24 p-5 w-11/12 mx-auto flex justify-between ">
+     <header>
+    <div class= "bg-[#f9f7f3] w-full">
+        <div class="navbar h-24 p-5 w-11/12 mx-auto flex justify-between mb-8 ">
             <!-- Navigation left size button start here -->
             <div>
                 <button class="btn btn-active bg-lime-400 font-extrabold text-xl ">Blog</button>
@@ -33,55 +34,50 @@
                 <img src="./assets/coin.png" alt="">
                 <p class="btn btn-ghost text-xl">5500 <span>BDT</span></p>
             </div>
-            <!-- Navigation Right side End -->
+         </div>
+           <!-- Navigation Right side End -->
+        </div>
+        <div class="flex justify-center gap-2  mb-4">
+          <div>
+              <button class="btn btn-active bg-lime-400 font-extrabold text-xl ">Donation</button>
           </div>
+          <div>
+              <button class="btn bg-white font-extrabold text-xl ">History</button>
+          </div>
+          </div>
+        
     </header>
+    
     <!-- Header End Here -->
      
 
     <!-- Main start Herer -->
-    <main class="w-10/12 justify-center my-12 p-5 mx-auto bg-white border-4 border-red-600">
-        <div class="flex justify-center gap-2 mb-8">
-            <div>
-                <button class="btn btn-active bg-lime-400 font-extrabold text-xl ">Donation</button>
-            </div>
-            <div>
-                <button class="btn bg-white font-extrabold text-xl ">History</button>
-            </div>
-         </div>
+    <main>
+        <div class="hero bg-base-200 min-h-screen">
+            <div class="hero-content flex-col lg:flex-row">
+              <img class=" w-full h-full"
+                src="./assets/noakhali.png"
+                class="max-w-sm rounded-lg shadow-2xl" />
 
-         <!-- Donnation card for Noakhali -->
-          <div>
-            <!-- left size image of noakhali -->
-            <div class="card card-side max-md:flex-col bg-base-100 shadow-xl">
-                <div class="md:w-6/12">
-                    <figure class="max-md:w-full">
-                        <img
-                          src="./assets/noakhali.png"
-                          alt="Donation_Noakhali" />
-                      </figure>
-                </div>
-                <!-- Right side of noakhali content  -->
-                <div class="card-body w-6/12 flex-col justify-between max-md:w-full">
-                    <div class="card-actions flex items-center justify-start">
-                        <button class="btn  p-4 font-bold text-lg items-center content-center w-18"><img src="./assets/coin.png" alt=""><span>00</span>BDT</button>
-                      </div>
+              <div class="">
 
-                  <div>
-                    <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
-                  <p class="items-center font-normal"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <div class="card-actions flex items-center justify-start">
+                    <button class="btn p-4 font-bold text-lg content-center w-18 bg-lime-300"><img src="./assets/coin.png" alt=""><span>00</span>BDT</button>
                   </div>
-                  <!-- Noakhali donate amount and button -->
-                  <div class="card-actions justify-center">
+                <h1 class="text-4xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="py-6">
+                    The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                </p>
+                <!-- Noakhali donate amount and button -->
+                <div class="card-actions justify-center">
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
                     <button class="btn bg-lime-400 p-4 font-bold text-lg content-center w-full">Donate Now</button>
                   </div>
-                </div>
               </div>
+            </div>
           </div>
-
     </main>
-    <!-- Main Ende Here -->
+        <!-- Main Ende Here -->
 
     <!-- Footer Start Here -->
      <footer>
