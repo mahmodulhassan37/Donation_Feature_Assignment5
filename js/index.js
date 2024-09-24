@@ -151,24 +151,39 @@ document.getElementById('modal-close-btn').addEventListener('click',function(eve
 
 })
 
+
 // Top donation Button secton
-document.getElementById('donation-top-button').addEventListener('click',function(event){
+// toggle top Donation Button
+let donation = document.getElementById('donation-top-button');
+let history = document.getElementById('add-history-btn');
+ donation.addEventListener('click',function(event){
     event.preventDefault;
     document.getElementById('noakhali-card').classList.remove('hidden');
     document.getElementById('feni-card').classList.remove('hidden');
     document.getElementById('quota-card').classList.remove('hidden');
     document.getElementById('history-list-form').classList.add('hidden');
-    
 
+    // toggle some class add 
+       donation.classList.add('bg-green-500', 'text-black');
+       donation.classList.remove('bg-gray-300', 'text-gray-700');
+       history.classList.add('bg-gray-300', 'text-gray-700');
+       history.classList.remove('bg-green-500', 'text-black');
 })
 
 //Top History Section
-document.getElementById('add-history-btn').addEventListener('click',function(event){
+     history.addEventListener('click',function(event){
     event.preventDefault;
     document.getElementById('history-list-form').classList.remove('hidden');
     document.getElementById('noakhali-card').classList.add('hidden');
     document.getElementById('feni-card').classList.add('hidden');
     document.getElementById('quota-card').classList.add('hidden');
+
+    // history toggle
+      history.classList.add('bg-green-500', 'text-black');
+      history.classList.remove('bg-gray-300', 'text-gray-700');
+      donation.classList.add('bg-gray-300', 'text-gray-700');
+      donation.classList.remove('bg-green-500', 'text-black');
+      
 
 })
 
