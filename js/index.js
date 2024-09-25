@@ -1,17 +1,18 @@
 document.getElementById("donate-input-button").addEventListener('click',function(event){
-    event.defaultPrevented;
+    event.preventDefault();
     let donateInputAmount = parseFloat(document.getElementById('donate-input-amount').value);
     let accountAmount = parseFloat(document.getElementById("accountBalance").innerText);
 
     // modal funcation
     
-    if(!isNaN(donateInputAmount) && Number(donateInputAmount)>=1){
+    if(!isNaN(donateInputAmount) && Number(donateInputAmount)>=1 &&  /^[0-9]+$/.test(donateInputAmount)){
         let nokhaliAmount = parseFloat(document.getElementById('noakhaliDonate').innerText);
         if(accountAmount>=donateInputAmount)
         {
             updatedBalance = accountAmount-donateInputAmount;
             document.getElementById("accountBalance").innerText = updatedBalance;
-
+            localStorage.setItem('updatedBalance', updatedBalance);
+        
             updatedNoakhaliAmoutn= nokhaliAmount+donateInputAmount;
             document.getElementById('noakhaliDonate').innerText =updatedNoakhaliAmoutn;
 
@@ -45,7 +46,7 @@ document.getElementById("donate-input-button").addEventListener('click',function
 
 // Feni function here
 document.getElementById("feni-input-button").addEventListener('click',function(event){
-    event.defaultPrevented;
+    event.preventDefault();
     let donateInputAmount = parseFloat(document.getElementById('feni-input-amount').value);
     let accountAmount = parseFloat(document.getElementById("accountBalance").innerText);
 
@@ -57,7 +58,8 @@ document.getElementById("feni-input-button").addEventListener('click',function(e
         {
             updatedBalance = accountAmount-donateInputAmount;
             document.getElementById("accountBalance").innerText = updatedBalance;
-
+            localStorage.setItem('updatedBalance', updatedBalance);
+           
             updatedNoakhaliAmoutn= nokhaliAmount+donateInputAmount;
             document.getElementById('feni-Donate').innerText =updatedNoakhaliAmoutn;
 
@@ -95,7 +97,7 @@ document.getElementById("feni-input-button").addEventListener('click',function(e
 
 // Qutoa Element start Here
 document.getElementById("quota-input-button").addEventListener('click',function(event){
-    event.defaultPrevented;
+    event.preventDefault();
     let donateInputAmount = parseFloat(document.getElementById('quota-input-amount').value);
     let accountAmount = parseFloat(document.getElementById("accountBalance").innerText);
 
@@ -107,9 +109,7 @@ document.getElementById("quota-input-button").addEventListener('click',function(
         {
             updatedBalance = accountAmount-donateInputAmount;
             document.getElementById("accountBalance").innerText = updatedBalance;
-
             updatedNoakhaliAmoutn= nokhaliAmount+donateInputAmount;
-            document.getElementById('quota-Donate').innerText =updatedNoakhaliAmoutn;
 
             document.getElementById('quota-modal').showModal()
             document.getElementById('quota-modal').classList.remove("hidden");
@@ -164,10 +164,10 @@ let history = document.getElementById('add-history-btn');
     document.getElementById('history-list-form').classList.add('hidden');
 
     // toggle some class add 
-       donation.classList.add('bg-green-500', 'text-black');
-       donation.classList.remove('bg-gray-300', 'text-gray-700');
-       history.classList.add('bg-gray-300', 'text-gray-700');
-       history.classList.remove('bg-green-500', 'text-black');
+       donation.classList.add('bg-green-500','text-black');
+       donation.classList.remove('bg-gray-300','text-gray-700');
+       history.classList.add('bg-gray-300','text-gray-700');
+       history.classList.remove('bg-green-500','text-black');
 })
 
 //Top History Section
@@ -179,11 +179,9 @@ let history = document.getElementById('add-history-btn');
     document.getElementById('quota-card').classList.add('hidden');
 
     // history toggle
-      history.classList.add('bg-green-500', 'text-black');
-      history.classList.remove('bg-gray-300', 'text-gray-700');
-      donation.classList.add('bg-gray-300', 'text-gray-700');
-      donation.classList.remove('bg-green-500', 'text-black');
-      
+      history.classList.add('bg-green-500','text-black');
+      history.classList.remove('bg-gray-300','text-gray-700');
+      donation.classList.add('bg-gray-300','text-gray-700');
+      donation.classList.remove('bg-green-500','text-black');
 
 })
-
