@@ -96,8 +96,10 @@ document.getElementById("feni-input-button").addEventListener('click',function(e
 // Qutoa Element start Here
 document.getElementById("quota-input-button").addEventListener('click',function(event){
     event.defaultPrevented;
-    let donateInputAmount = parseFloat(document.getElementById('quota-input-amount').value);
-    let accountAmount = parseFloat(document.getElementById("accountBalance").innerText);
+
+    // Two common Function 
+    let donateInputAmount = donate_input_amount('quota-input-amount'); 
+    let accountAmount = donteFromAccount('accountBalance');
 
     // modal funcation
     
